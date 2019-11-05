@@ -4,6 +4,7 @@ USER root
 
 # Install MySQL
 RUN apt-get update \
+ && apt-get install -y --no-install-recommends apt-utils \
  && apt-get install -y mysql-server \
  && apt-get clean && rm -rf /var/cache/apt/* /var/lib/apt/lists/* /tmp/* \
  && mkdir /var/run/mysqld \
